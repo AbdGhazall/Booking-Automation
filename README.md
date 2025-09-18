@@ -1,56 +1,55 @@
-# SauceDemo Automation Testing
+# Booking.com Automation Testing
 
-This project is an automated testing suite for the [SauceDemo](https://www.saucedemo.com/) web application. It is developed using **Java**, **Selenium WebDriver**, and **TestNG**, and simulates user interactions such as logging in, adding/removing items from the cart, and completing the checkout process.
+This project automates [Booking.com](https://www.booking.com) website test cases using **Selenium WebDriver, Java, and TestNG**.  
+It covers end-to-end scenarios such as homepage validation, search functionality, filters, sorting, booking flow, login, language/currency change, responsiveness, customer support, offers, and wishlist.
+
+---
+
+## 📂 Project Structure
+```
+Booking/  
+│── src/  
+│ └── booking_tests/  
+│ ├── Booking_HomepageTest.java # Contains all test cases  
+│ └── TestData.java # Holds test data and parameters  
+│  
+│── pom.xml # Maven dependencies  
+│── testng.xml # TestNG configuration (if used)  
+│── README.md # Project documentation
+```
 
 ---
 
 ## 🛠️ Tools & Frameworks
 
-- **TestNG** – For structuring and prioritizing test cases  
-- **Selenium WebDriver** – For interacting with the web UI  
-- **EdgeDriver** – Used as the default browser for this test suite  
-- **WebDriverManager** – To manage drivers automatically
+- **Java** – Programming language  
+- **Selenium WebDriver** – Browser automation  
+- **TestNG** – Test runner & reporting  
+- **Maven** – Dependency management  
+- **ChromeDriver** – WebDriver for Chrome browser  
+- **Eclipse IDE** – Development environment  
+
 ---
+
 ## ✅ Features & Test Scenarios
 
-1. **Login Test**  
-   - Enters valid credentials and logs into the application.
-
-2. **Add to Cart Test**  
-   - Adds two specific items to the shopping cart.
-
-3. **Remove from Cart Test**  
-   - Removes the previously added items from the cart.
-
-4. **Re-Add Items Test**  
-   - Adds the same two items again after removal.
-
-5. **Checkout Process Test**  
-   - Navigates to the cart, fills out the checkout form, and completes the purchase.
-
-6. **Logout Test**  
-   - Logs the user out via the burger menu.
-
-7. **Add All Items to the Cart (Even-Indexed Only)**  
-   - Iterates over all available products and adds only those with even indexes to the cart.  
-   - Prints the name and price of each product and logs whether it was added or not based on its index.
-
-8. **(Commented) Dynamic Price Handling (Optional)**  
-   - Includes optional logic (currently commented) to collect product prices dynamically into a list.  
-   - Can be used for advanced validations, like total price calculations or conditional filtering based on price.
+1. **Homepage Accessibility** – Verify homepage loads successfully.  
+2. **Accommodation Search** – Search by city & dates, verify results.  
+3. **Filter Application** – Apply star-rating filter, verify update.  
+4. **Sorting Results** – Sort by lowest price, verify results.  
+5. **Accommodation Detail Page** – Open property detail, verify info & price.  
+6. **Booking Process** – Start room booking flow.  
+7. **Guest Details Form** – Fill booking form with user details.  
+8. **Payment Form (Dummy)** – Fill card details inside iframe (without submit).  
+9. **User Login** – Log in with valid credentials.  
+10. **Language Selection** – Change site language (English/Arabic).  
+11. **Currency Selection** – Change displayed currency.  
+12. **Mobile Responsiveness** – Verify mobile menu.  
+13. **Customer Support** – Access Help page.  
+14. **Promotional Offers** – Verify offers are displayed.  
+15. **Wishlist (Favorites)** – Save property to Wishlist and verify.  
 
 ---
-## 📌 Notes
+<img width="938" height="566" alt="Screenshot 2025-09-19 012914" src="https://github.com/user-attachments/assets/1cd8e5b6-33b0-465b-94a3-ebde6fcd61cc" />   
+<img width="1414" height="1286" alt="Untitled design (1)" src="https://github.com/user-attachments/assets/f14926f9-d731-4d66-a56f-374b340977a5" />
 
-- `Thread.sleep()` is used for wait simulation, but in real-world scenarios, explicit or fluent waits are preferred for reliability.
-- `@BeforeTest` sets up the browser, and `@AfterTest` closes it after test execution.
-- Test priority ensures logical and sequential flow of the test cases.
-
----
-## 📸 Screenshots
-![SauceDemoOutput](https://github.com/user-attachments/assets/106f1d02-312f-445e-bc40-cfda5bbcfedf)   
-![eclipse_aoHI2XXlrS](https://github.com/user-attachments/assets/b27b9696-0e07-4a3a-8894-a3e2781e9dfc)
-
-
-"# Booking-Automation" 
-"# Booking-Automation" 
