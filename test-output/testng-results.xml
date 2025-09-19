@@ -1,17 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="14" total="15" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="15" passed="12" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-19T01:34:26 AST" name="Default suite" finished-at="2025-09-19T01:34:38 AST" duration-ms="12299">
+  <suite started-at="2025-09-19T02:04:59 AST" name="Default suite" finished-at="2025-09-19T02:06:49 AST" duration-ms="110174">
     <groups>
     </groups>
-    <test started-at="2025-09-19T01:34:26 AST" name="Default test" finished-at="2025-09-19T01:34:38 AST" duration-ms="12299">
+    <test started-at="2025-09-19T02:04:59 AST" name="Default test" finished-at="2025-09-19T02:06:49 AST" duration-ms="110174">
       <class name="booking_tests.Booking_HomepageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:booking_tests.Booking_HomepageTest@1e800aaa]" started-at="2025-09-19T01:34:26 AST" name="setup" finished-at="2025-09-19T01:34:32 AST" duration-ms="5909" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:booking_tests.Booking_HomepageTest@1e800aaa]" started-at="2025-09-19T02:04:59 AST" name="setup" finished-at="2025-09-19T02:05:05 AST" duration-ms="5891" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="addToWishlist()[pri:15, instance:booking_tests.Booking_HomepageTest@1e800aaa]" started-at="2025-09-19T01:34:32 AST" name="addToWishlist" finished-at="2025-09-19T01:34:38 AST" duration-ms="6349" status="PASS">
+        <test-method signature="homepageLoadsSuccessfully()[pri:1, instance:booking_tests.Booking_HomepageTest@1e800aaa]" started-at="2025-09-19T02:05:05 AST" name="homepageLoadsSuccessfully" finished-at="2025-09-19T02:05:08 AST" duration-ms="3247" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homepageLoadsSuccessfully -->
+        <test-method signature="searchAccommodation()[pri:2, instance:booking_tests.Booking_HomepageTest@1e800aaa]" started-at="2025-09-19T02:05:08 AST" name="searchAccommodation" finished-at="2025-09-19T02:05:17 AST" duration-ms="8964" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchAccommodation -->
+        <test-method signature="applyStarRatingFilter()[pri:3, instance:booking_tests.Booking_HomepageTest@1e800aaa]" started-at="2025-09-19T02:05:17 AST" name="applyStarRatingFilter" finished-at="2025-09-19T02:05:20 AST" depends-on-methods="booking_tests.Booking_HomepageTest.searchAccommodation" duration-ms="2580" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- applyStarRatingFilter -->
+        <test-method signature="sortByLowestPrice()[pri:4, instance:booking_tests.Booking_HomepageTest@1e800aaa]" started-at="2025-09-19T02:05:20 AST" name="sortByLowestPrice" finished-at="2025-09-19T02:05:20 AST" depends-on-methods="booking_tests.Booking_HomepageTest.searchAccommodation" duration-ms="580" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sortByLowestPrice -->
+        <test-method signature="openAccommodationDetailPage()[pri:5, instance:booking_tests.Booking_HomepageTest@1e800aaa]" started-at="2025-09-19T02:05:20 AST" name="openAccommodationDetailPage" finished-at="2025-09-19T02:05:29 AST" depends-on-methods="booking_tests.Booking_HomepageTest.searchAccommodation" duration-ms="8869" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openAccommodationDetailPage -->
+        <test-method signature="bookingProcess()[pri:6, instance:booking_tests.Booking_HomepageTest@1e800aaa]" started-at="2025-09-19T02:05:29 AST" name="bookingProcess" finished-at="2025-09-19T02:05:44 AST" depends-on-methods="booking_tests.Booking_HomepageTest.openAccommodationDetailPage" duration-ms="14981" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookingProcess -->
+        <test-method signature="completeGuestDetailsForm()[pri:7, instance:booking_tests.Booking_HomepageTest@1e800aaa]" started-at="2025-09-19T02:05:44 AST" name="completeGuestDetailsForm" finished-at="2025-09-19T02:05:55 AST" depends-on-methods="booking_tests.Booking_HomepageTest.bookingProcess" duration-ms="11080" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- completeGuestDetailsForm -->
+        <test-method signature="fillPaymentFormDummy()[pri:8, instance:booking_tests.Booking_HomepageTest@1e800aaa]" started-at="2025-09-19T02:05:55 AST" name="fillPaymentFormDummy" finished-at="2025-09-19T02:06:05 AST" depends-on-methods="booking_tests.Booking_HomepageTest.bookingProcess" duration-ms="9794" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillPaymentFormDummy -->
+        <test-method signature="userLogin()[pri:9, instance:booking_tests.Booking_HomepageTest@1e800aaa]" started-at="2025-09-19T02:06:05 AST" name="userLogin" finished-at="2025-09-19T02:06:13 AST" duration-ms="7897" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userLogin -->
+        <test-method signature="changeLanguage()[pri:10, instance:booking_tests.Booking_HomepageTest@1e800aaa]" started-at="2025-09-19T02:06:13 AST" name="changeLanguage" finished-at="2025-09-19T02:06:25 AST" duration-ms="12108" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //span[@class='b98ba2834c f77a73f1ba f0a26771c4'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: C:\Users\abodg\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52707}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52707/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2c33659221a768c6a75b8c3300937ac5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //span[@class='b98ba2834c f77a73f1ba f0a26771c4'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: C:\Users\abodg\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52707}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52707/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2c33659221a768c6a75b8c3300937ac5
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at booking_tests.Booking_HomepageTest.changeLanguage(Booking_HomepageTest.java:316)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changeLanguage -->
+        <test-method signature="changeCurrency()[pri:11, instance:booking_tests.Booking_HomepageTest@1e800aaa]" started-at="2025-09-19T02:06:25 AST" name="changeCurrency" finished-at="2025-09-19T02:06:35 AST" duration-ms="10064" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //button[@data-testid='header-currency-picker-trigger']//span[@class='ca2ca5203b'][normalize-space()='KWD'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: C:\Users\abodg\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52707}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52707/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2c33659221a768c6a75b8c3300937ac5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[@data-testid='header-currency-picker-trigger']//span[@class='ca2ca5203b'][normalize-space()='KWD'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: C:\Users\abodg\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52707}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52707/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2c33659221a768c6a75b8c3300937ac5
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at booking_tests.Booking_HomepageTest.changeCurrency(Booking_HomepageTest.java:326)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changeCurrency -->
+        <test-method signature="customerSupportAccess()[pri:12, instance:booking_tests.Booking_HomepageTest@1e800aaa]" started-at="2025-09-19T02:06:35 AST" name="customerSupportAccess" finished-at="2025-09-19T02:06:37 AST" duration-ms="2175" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- customerSupportAccess -->
+        <test-method signature="offersSectionDisplay()[pri:13, instance:booking_tests.Booking_HomepageTest@1e800aaa]" started-at="2025-09-19T02:06:37 AST" name="offersSectionDisplay" finished-at="2025-09-19T02:06:43 AST" duration-ms="5240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- offersSectionDisplay -->
+        <test-method signature="addToWishlist()[pri:14, instance:booking_tests.Booking_HomepageTest@1e800aaa]" started-at="2025-09-19T02:06:43 AST" name="addToWishlist" finished-at="2025-09-19T02:06:49 AST" duration-ms="6583" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToWishlist -->

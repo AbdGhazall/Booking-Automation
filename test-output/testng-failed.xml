@@ -5,8 +5,9 @@
     <classes>
       <class name="booking_tests.Booking_HomepageTest">
         <methods>
-          <include name="addToWishlist"/>
           <include name="setup"/>
+          <include name="changeCurrency"/>
+          <include name="changeLanguage"/>
         </methods>
       </class> <!-- booking_tests.Booking_HomepageTest -->
     </classes>

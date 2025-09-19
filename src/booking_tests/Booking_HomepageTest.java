@@ -31,10 +31,10 @@ public class Booking_HomepageTest extends TestData {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		driver.get("https://www.booking.com/?lang=en-us"); // force English
+		driver.get(TestData.MainPage); // force English
 	}
 
-	@Test(priority = 1, enabled = false)
+	@Test(priority = 1, enabled = true)
 	public void homepageLoadsSuccessfully() throws InterruptedException {
 		Thread.sleep(3000);
 		// Check title
@@ -56,7 +56,7 @@ public class Booking_HomepageTest extends TestData {
 		Assert.assertTrue(searchButton.isDisplayed());
 	}
 
-	@Test(priority = 2, enabled = false)
+	@Test(priority = 2, enabled = true)
 	public void searchAccommodation() throws InterruptedException {
 		// Dynamic dates
 		LocalDate today = LocalDate.now();
@@ -95,7 +95,7 @@ public class Booking_HomepageTest extends TestData {
 		Assert.assertTrue(resultsList.isDisplayed());
 	}
 
-	@Test(priority = 3, dependsOnMethods = "searchAccommodation", enabled = false)
+	@Test(priority = 3, dependsOnMethods = "searchAccommodation", enabled = true)
 	public void applyStarRatingFilter() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0,2300)");
@@ -112,7 +112,7 @@ public class Booking_HomepageTest extends TestData {
 		Assert.assertTrue(appliedFilterBadge.isDisplayed());
 	}
 
-	@Test(priority = 4, dependsOnMethods = "searchAccommodation", enabled = false)
+	@Test(priority = 4, dependsOnMethods = "searchAccommodation", enabled = true)
 	public void sortByLowestPrice() {
 		// Open the sort dropdown
 		WebElement sortDropdown = wait.until(ExpectedConditions.elementToBeClickable(
@@ -130,7 +130,7 @@ public class Booking_HomepageTest extends TestData {
 		Assert.assertTrue(activeSort.getText().contains("Price (lowest first)"));
 	}
 
-	@Test(priority = 5, dependsOnMethods = "searchAccommodation", enabled = false)
+	@Test(priority = 5, dependsOnMethods = "searchAccommodation", enabled = true)
 	public void openAccommodationDetailPage() throws InterruptedException {
 		Thread.sleep(3000);
 		// Click the first property in the results list
@@ -155,7 +155,7 @@ public class Booking_HomepageTest extends TestData {
 		Assert.assertTrue(propertyPrice.isDisplayed());
 	}
 
-	@Test(priority = 6, dependsOnMethods = "openAccommodationDetailPage", enabled = false)
+	@Test(priority = 6, dependsOnMethods = "openAccommodationDetailPage", enabled = true)
 	public void bookingProcess() throws InterruptedException {
 		Thread.sleep(3000);
 		// Click the "Reserve" button and it scrolls by default to select rooms
@@ -189,7 +189,7 @@ public class Booking_HomepageTest extends TestData {
 		Assert.assertTrue(emailInput.isDisplayed());
 	}
 
-	@Test(priority = 7, dependsOnMethods = "bookingProcess", enabled = false)
+	@Test(priority = 7, dependsOnMethods = "bookingProcess", enabled = true)
 	public void completeGuestDetailsForm() {
 		// Fill first name
 		WebElement firstNameInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("firstname")));
@@ -242,7 +242,7 @@ public class Booking_HomepageTest extends TestData {
 	 * switchTo().frame(...).
 	 */
 
-	@Test(priority = 8, dependsOnMethods = "bookingProcess", enabled = false)
+	@Test(priority = 8, dependsOnMethods = "bookingProcess", enabled = true)
 	public void fillPaymentFormDummy() {
 		// Switch into the Payment iframe
 		WebElement paymentFrame = wait
@@ -276,7 +276,7 @@ public class Booking_HomepageTest extends TestData {
 		driver.switchTo().defaultContent();
 	}
 
-	@Test(priority = 9, enabled = false)
+	@Test(priority = 9, enabled = true)
 	public void userLogin() throws InterruptedException {
 		driver.navigate().to(TestData.LoginPage);
 
@@ -297,9 +297,9 @@ public class Booking_HomepageTest extends TestData {
 		Assert.assertTrue(allRightsReservedText.isDisplayed());
 	}
 
-	@Test(priority = 10, enabled = false)
+	@Test(priority = 10, enabled = true)
 	public void changeLanguage() {
-		driver.get("https://www.booking.com/");
+//		driver.get("https://www.booking.com/");
 		// Open language selector
 		WebElement langBtn = wait.until(ExpectedConditions
 				.elementToBeClickable(By.xpath("//button[@data-testid='header-language-picker-trigger']")));
@@ -319,9 +319,9 @@ public class Booking_HomepageTest extends TestData {
 		Assert.assertTrue(ActualArabicHeading.isDisplayed());
 	}
 
-	@Test(priority = 11, enabled = false)
+	@Test(priority = 11, enabled = true)
 	public void changeCurrency() {
-		driver.get("https://www.booking.com/");
+//		driver.get("https://www.booking.com/");
 		// Open currency selector
 		WebElement currencyBtn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
 				"//button[@data-testid='header-currency-picker-trigger']//span[@class='ca2ca5203b'][normalize-space()='KWD']")));
@@ -336,18 +336,9 @@ public class Booking_HomepageTest extends TestData {
 		Assert.assertTrue(currencyLabel.getText().contains("USD"));
 	}
 
-	@Test(priority = 12, enabled = false)
-	public void mobileResponsiveness() {
-		driver.get("https://www.booking.com/");
-		// Check if hamburger menu is displayed in mobile view
-		WebElement menuBtn = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[aria-label='Menu']")));
-		Assert.assertTrue(menuBtn.isDisplayed());
-	}
-
-	@Test(priority = 13, enabled = false)
+	@Test(priority = 12, enabled = true)
 	public void customerSupportAccess() {
-		driver.get("https://www.booking.com/help.en-gb.html");
+		driver.get(TestData.CustomerSupportPage);
 
 		// Verify page contains contact options
 		WebElement helpCenter = wait
@@ -355,7 +346,7 @@ public class Booking_HomepageTest extends TestData {
 		Assert.assertTrue(helpCenter.getText().contains("Help"));
 	}
 
-	@Test(priority = 14, enabled = false)
+	@Test(priority = 13, enabled = true)
 	public void offersSectionDisplay() {
 		driver.get("https://www.booking.com/");
 
@@ -366,7 +357,7 @@ public class Booking_HomepageTest extends TestData {
 		Assert.assertTrue(offersList.isDisplayed());
 	}
 
-	@Test(priority = 15, enabled = false)
+	@Test(priority = 14, enabled = true)
 	public void addToWishlist() throws InterruptedException {
 		driver.get("https://www.booking.com/");
 
@@ -379,5 +370,14 @@ public class Booking_HomepageTest extends TestData {
 		// After clicking, it should become "active"
 		String ariaPressed = heartIcon.getAttribute("aria-expanded");
 		Assert.assertEquals(ariaPressed, "true");
+	}
+
+	@Test(priority = 15, enabled = false)
+	public void mobileResponsiveness() {
+		driver.get("https://www.booking.com/");
+		// Check if hamburger menu is displayed in mobile view
+		WebElement menuBtn = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[aria-label='Menu']")));
+		Assert.assertTrue(menuBtn.isDisplayed());
 	}
 }
