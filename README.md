@@ -1,4 +1,4 @@
-# Booking.com Automation Testing
+# Booking Automation Testing
 
 This project automates [Booking.com](https://www.booking.com) website test cases using **Selenium WebDriver, Java, and TestNG**.  
 It covers end-to-end scenarios such as homepage validation, search functionality, filters, sorting, booking flow, login, language/currency change, responsiveness, customer support, offers, and wishlist.
